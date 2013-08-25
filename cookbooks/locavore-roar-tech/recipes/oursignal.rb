@@ -15,7 +15,9 @@ gem_package 'unicorn'
 gem_package 'swift'
 gem_package 'swift-db-postgres'
 
-directory '/opt/apps/oursignal'
+directory '/opt/apps/oursignal' do
+	recursive true
+end
 
 git '/opt/apps/oursignal' do
 	repository 'git://github.com/vdog/oursignal.git' 
