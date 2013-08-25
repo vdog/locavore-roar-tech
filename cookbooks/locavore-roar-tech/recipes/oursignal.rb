@@ -31,7 +31,6 @@ gem_package 'postrank-uri'
 
 directory '/opt/apps/oursignal' do
 	owner 'oursignal'
-	mode 00644
 	recursive true
 end
 
