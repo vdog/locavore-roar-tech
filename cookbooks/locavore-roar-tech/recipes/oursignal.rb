@@ -8,12 +8,14 @@ package 'libuuid-devel'
 package 'gcc'
 package 'libtool'
 package 'make'
+package 'mlocate'
 gem_package 'addressable'
 gem_package 'bigdecimal'
 gem_package 'bundler'
 gem_package 'unicorn'
 gem_package 'swift'
 gem_package 'swift-db-postgres'
+gem_package 'postrank-uri'
 
 directory '/opt/apps/oursignal' do
 	recursive true
