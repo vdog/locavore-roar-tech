@@ -29,8 +29,14 @@ gem_package 'yajl-ruby'
 gem_package 'addressable'
 gem_package 'postrank-uri'
 
+service 'postgresql' do
+	pattern 'postmaster'
+	action [:enable, :start]
+end
+
 cookbook_file '/var/lib/pgsql9/data/pg_hba.conf' do
 	source 'pg_hba.conf'
+	notifies :restart, "service[postgresql]"
 end
 
 directory '/opt/apps/oursignal' do
