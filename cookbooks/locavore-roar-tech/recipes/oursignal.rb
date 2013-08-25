@@ -28,6 +28,7 @@ gem_package 'nokogiri'
 gem_package 'yajl-ruby'
 gem_package 'addressable'
 gem_package 'postrank-uri'
+gem_package 'flock'
 
 service 'postgresql' do
 	pattern 'postmaster'
