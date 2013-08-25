@@ -5,6 +5,11 @@ Setup:
 	knife node run_list add $NodeName "recipe[locavore-roar-tech::oursignal]" 
 	knife ssh "name:$NodeName" "sudo chef-client" -x ec2-user -i $SSH_PEM
 
+Applying Changes:
+	git commit -a -m 
+	git push -u origin master
+	knife cookbook upload locavore-roar-tech
+	knife ssh "name:$NodeName" "sudo chef-client" -x ec2-user -i $SSH_PEM
 e.g.
 This cookbook makes your favorite breakfast sandwhich.
 
