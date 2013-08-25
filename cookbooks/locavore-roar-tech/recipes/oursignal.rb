@@ -41,6 +41,10 @@ cookbook_file '/var/lib/pgsql9/data/pg_hba.conf' do
 	notifies :restart, "service[postgresql]"
 end
 
+cookbook_file '/etc/nginx/conf.d/oursignal.conf' do
+	source 'oursignal.conf'
+end
+
 directory '/opt/apps/oursignal' do
 	owner 'oursignal'
 	recursive true
