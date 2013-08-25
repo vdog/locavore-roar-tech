@@ -50,6 +50,9 @@ git '/opt/apps/oursignal' do
 	reference 'master'
 end
 
+directory '/opt/apps/oursignal/public/' do 
+	mode 00777
+end
 directory '/opt/apps/oursignal/tmp/' do 
 	mode 00777
 end
