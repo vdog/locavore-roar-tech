@@ -1,6 +1,6 @@
 
-package rvm
-package nginx
-package postgresql-server
-package postresql-libs
+package 'git'
+package 'nginx'
+package 'postgresql-server'
+package 'postresql-libs'
 
