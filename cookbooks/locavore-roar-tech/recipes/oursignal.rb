@@ -24,3 +24,11 @@ git '/opt/apps/oursignal' do
 	reference 'master'
 end
 
+user 'oursignal' do
+	supports :manage_home => true;
+	home '/home/oursignal'
+	shell '/bin/bash'
+end
+
+
+
