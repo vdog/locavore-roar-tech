@@ -15,3 +15,10 @@ gem_package 'unicorn'
 gem_package 'swift'
 gem_package 'swift-db-postgres'
 
+directory '/opt/apps/oursignal'
+
+git '/opt/apps/oursignal' do
+	repository 'git://github.com/vdog/oursignal.git' 
+	reference 'master'
+end
+
