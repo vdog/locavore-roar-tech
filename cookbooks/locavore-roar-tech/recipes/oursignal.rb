@@ -50,6 +50,10 @@ git '/opt/apps/oursignal' do
 	reference 'master'
 end
 
+directory '/opt/apps/oursignal/tmp/' do 
+	mode 00777
+end
+
 user 'oursignal' do
 	supports :manage_home => true;
 	home '/home/oursignal'
