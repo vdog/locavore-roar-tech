@@ -36,6 +36,10 @@ service 'postgresql' do
 	action [:enable, :start]
 end
 
+service 'nginx' do
+	action [:enable, :start]
+end
+
 cookbook_file '/var/lib/pgsql9/data/pg_hba.conf' do
 	source 'pg_hba.conf'
 	notifies :restart, "service[postgresql]"
@@ -43,6 +47,7 @@ end
 
 cookbook_file '/etc/nginx/conf.d/oursignal.conf' do
 	source 'oursignal.conf'
+	notifies :restart, "service[nginx]"
 end
 
 directory '/opt/apps/oursignal' do
