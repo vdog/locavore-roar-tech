@@ -29,6 +29,10 @@ gem_package 'yajl-ruby'
 gem_package 'addressable'
 gem_package 'postrank-uri'
 
+cookbook_file '/var/lib/pgsql9/data/pg_hba.conf' do
+	source 'pg_hba.conf'
+end
+
 directory '/opt/apps/oursignal' do
 	owner 'oursignal'
 	recursive true
