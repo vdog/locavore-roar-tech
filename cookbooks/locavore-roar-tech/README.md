@@ -1,19 +1,19 @@
 locavore-roar-tech Cookbook
 ===========================
 Setup:
-...
+```
 	knife ec2 server create --image ami-05355a6c --flavor t1.micro -G $SecurityGroup -x $SSH_USER -N $NodeName -i $SSH_PEM -A $APIID -K $AccessKey -S $SecurityKeyPairName
 	knife node run_list add $NodeName "recipe[locavore-roar-tech::oursignal]" 
 	knife ssh "name:$NodeName" "sudo chef-client" -x ec2-user -i $SSH_PEM
-...
+```
 
 Applying Changes:
-...
+```
 	git commit -a -m 
 	git push -u origin master
 	knife cookbook upload locavore-roar-tech
 	knife ssh "name:$NodeName" "sudo chef-client" -x ec2-user -i $SSH_PEM
-...
+```
 e.g.
 This cookbook makes your favorite breakfast sandwhich.
 
