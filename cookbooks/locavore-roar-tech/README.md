@@ -1,5 +1,8 @@
 locavore-roar-tech Cookbook
 ===========================
+
+Installs a CentOS-based server to run oursignal https://github.com/vdog/oursignal
+
 Setup:
 ```
 	knife ec2 server create --image ami-05355a6c --flavor t1.micro -G $SecurityGroup -x $SSH_USER -N $NodeName -i $SSH_PEM -A $APIID -K $AccessKey -S $SecurityKeyPairName
