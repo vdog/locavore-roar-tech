@@ -14,8 +14,6 @@ Applying Changes:
 	knife cookbook upload locavore-roar-tech
 	knife ssh "name:$NodeName" "sudo chef-client" -x ec2-user -i $SSH_PEM
 ```
-e.g.
-This cookbook makes your favorite breakfast sandwhich.
 
 Requirements
 ------------
