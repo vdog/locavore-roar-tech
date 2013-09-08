@@ -25,5 +25,6 @@ These 7 commands are the basic DevOps play.
 * Complete change tracking for source and configuration management.
 * Chef and Git are the sources of truth.
 * Knife serves as command and control.
+
 From here we can continue with adding monitoring, logging, and alerting automatically.  And whatever else our snowflake of an infrastructure may eventually need.
 
