@@ -12,70 +12,18 @@ Setup:
 
 Applying Changes:
 ```
+	# run these in the repo that changed:  source or chef-reop
 	git commit -a -m 
 	git push -u origin master
+	# run this for changes in the chef-repo only
 	knife cookbook upload locavore-roar-tech
+	# push the config and source changes to production
 	knife ssh "name:$NodeName" "sudo chef-client" -x ec2-user -i $SSH_PEM
 ```
+These 7 commands are the basic DevOps play.  
+* A repeatable build process from 'bare metal'.
+* Complete change tracking for source and configuration management.
+* Chef and Git are the sources of truth.
+* Knife serves as command and control.
+From here we can continue with adding monitoring, logging, and alerting automatically.  And whatever else our snowflake of an infrastructure may eventually need.
 
-Requirements
-------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
-
-e.g.
-#### packages
-- `toaster` - locavore-roar-tech needs toaster to brown your bagel.
-
-Attributes
-----------
-TODO: List you cookbook attributes here.
-
-e.g.
-#### locavore-roar-tech::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['locavore-roar-tech']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
-
-Usage
------
-#### locavore-roar-tech::default
-TODO: Write usage instructions for each cookbook.
-
-e.g.
-Just include `locavore-roar-tech` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[locavore-roar-tech]"
-  ]
-}
-```
-
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write you change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
-
-License and Authors
--------------------
-Authors: TODO: List authors
