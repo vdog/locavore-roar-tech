@@ -15,7 +15,8 @@ package 'libcurl-devel'
 package 'ImageMagick'
 gem_package 'bigdecimal'
 gem_package 'bundler'
-gem_package 'unicorn'
+#gem_package 'unicorn'
+gem_package 'puma'
 gem_package 'compass'
 gem_package 'haml'
 gem_package 'rack'
@@ -56,14 +57,14 @@ directory '/opt/apps/oursignal' do
 end
 
 git '/opt/apps/oursignal' do
-	repository 'git://github.com/vdog/oursignal.git' 
+	repository 'git://github.com/vdog/oursignal.git'
 	reference 'master'
 end
 
-directory '/opt/apps/oursignal/public/' do 
+directory '/opt/apps/oursignal/public/' do
 	mode 00777
 end
-directory '/opt/apps/oursignal/tmp/' do 
+directory '/opt/apps/oursignal/tmp/' do
 	mode 00777
 end
 
